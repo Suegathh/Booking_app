@@ -1,5 +1,6 @@
 const { Router } = require("express");
-const { getRooms, createRoom, updateRoom, deleteRoom } = require("../controller/roomController")
+const { getRooms, createRoom, updateRoom, deleteRoom, getRoom } = require("../controller/roomController");
+const { auth } = require("../middleware/authMidlleware");
 
 const router = Router();
 
@@ -7,14 +8,14 @@ const router = Router();
 router.get("/", getRooms)
 
 //create rooms
-router.post("/", createRoom)
+router.post("/", auth, createRoom)
 
 //single room
-router.get("/:id", getRooms)
+router.get("/:id", getRoom)
 
 //update room
-router.put("/:id", updateRoom)
+router.put("/:id", auth, updateRoom)
 
 //delete room
-router.delete("/:id", deleteRoom)
+router.delete("/:id", auth, deleteRoom)
 module.exports = router;
