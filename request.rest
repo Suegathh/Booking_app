@@ -1,0 +1,80 @@
+###
+GET http://localhost:5000/api/rooms
+
+###
+POST http://localhost:5000/api/rooms
+Content-Type: application/json
+
+    {
+        "name": "Deluxe Room",
+        "price": 150,
+        "desc": "A luxurious room with a king-sized bed, ensuite bathroom, and a scenic view.",
+        "roomsNumbers": [
+            {
+                "number": 101,
+                "unavailable": ["2025-01-28T00:00:00.000Z", "2025-02-15T00:00:00.000Z"]
+            },
+            {
+                "number": 102,
+                "unavailable": ["2025-01-29T00:00:00.000Z", "2025-02-16T00:00:00.000Z"]
+            }
+        ]
+    }
+
+# get single room
+###
+GET http://localhost:5000/api/rooms/677d25f077c18043cb4e25de
+
+#update room
+###
+PUT http://localhost:5000/api/rooms/677d25f077c18043cb4e25de
+Content-Type: application/json
+
+{
+    "name": "updated room",
+    "price": 1000
+}
+
+#delete room
+###
+DELETE http://localhost:5000/api/rooms/677d816c321444e66f671191
+
+#get bookings
+###
+GET http://localhost:5000/api/bookings
+
+#create booking
+###
+POST http://localhost:5000/api/bookings
+Content-Type: application/json
+
+{
+    "roomId": "601c1f73f1a86f001f9d97bc",
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "checkInDate": "2025-03-01",
+    "checkOutDate": "2025-03-05"
+}
+
+#get bookings
+###
+GET http://localhost:5000/api/bookings
+
+#get single booking
+###
+GET http://localhost:5000/api/bookings/677d40f4a624a79076cb3d23
+
+#update
+###
+PUT http://localhost:5000/api/bookings/677d40f4a624a79076cb3d23
+Content-Type: application/json
+
+{
+    "name": "Jane Doe",
+    "email": "janedoe@example.com"
+}
+
+#delete
+###
+DELETE http://localhost:5000/api/bookings/677d40f4a624a79076cb3d23
+
