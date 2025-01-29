@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "node backend/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon backend/index.js"
+    "server": "nodemon backend/index.js",
+    "admin": "npm start --prefix admin", 
+    "dev": "concurrently \"npm run server\" \"npm run admin\""
   },
   "keywords": [],
   "author": "",
@@ -13,10 +16,12 @@
   "description": "",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "concurrently": "^7.6.0",
     "cookie-parser": "^1.4.7",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.9.5"
+    "mongoose": "^8.9.5",
+    "web-vitals": "^2.1.0"
   }
 }
