@@ -8,6 +8,7 @@ import Dashboard from "./pages/Dashboard"
 import CreateRoom from "./pages/CreateRoom"
 import Rooms from "./pages/Rooms"
 import Room from "./pages/Room"
+import EditRoom from "./pages/EditRoom"
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/rooms/create" element={<CreateRoom />} />
           <Route path="/rooms/all/:id" element={<Room />} />
+          <Route path="/rooms/edit/:id" element={<EditRoom />} />
         </Routes>
       </Router>
     </div>

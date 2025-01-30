@@ -28,7 +28,6 @@ const Room = () => {
 
         if (res.ok) {
           const data = await res.json();
-          console.log("Fetched Room Data:", data);
           setRoom(data);
         }
       } catch (error) {
@@ -59,7 +58,8 @@ const Room = () => {
 
             {user && user.isAdmin ? (
               <div className="cta-wrapper">
-                <Link to={`/edit/rooms/${room._id}`}>Edit Room</Link>
+                <Link to={`/rooms/edit/${room._id}`}>Edit Room</Link>
+
                 <button onClick={handleDelete}>Delete Room</button>
               </div>
             ) : null}

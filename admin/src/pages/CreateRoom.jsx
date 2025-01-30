@@ -31,7 +31,7 @@ const CreateRoom = () => {
     useEffect(() => {
       if(isSuccess){
         dispatch(reset())
-        navigate("/dashboard")
+        navigate("/rooms")
       }
     })
 
