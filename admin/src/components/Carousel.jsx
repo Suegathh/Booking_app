@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Carousel.scss"
-import { current } from "@reduxjs/toolkit";
 const Carousel = ({ data }) => {
-  const [currentIndex, setCurrentIndex] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -17,7 +16,7 @@ const Carousel = ({ data }) => {
       return () => {
         clearInterval(interval);
       };
-    }, 8000);
+    }, 3000);
   }, []);
 
   return (

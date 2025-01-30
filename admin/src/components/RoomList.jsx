@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import "./RoomList.scss"
-//import Carousel from "./Carousel";
+import Carousel from "./Carousel";
 
 const RoomList = ({ data }) => {
   return (
@@ -14,8 +14,8 @@ const RoomList = ({ data }) => {
             className="room-unit"
           >
             <div className="img-wrapper">
-               { <img src={item.img[0]} alt="" /> }
-               {/* { <Carousel data={item.img} /> }   */}
+               {/* { <img src={item.img[0]} alt="" /> } */}
+               { <Carousel data={item.img} /> }  
             </div>
             <p className="name"> {item.name} </p>
           </Link>
