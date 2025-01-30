@@ -5,6 +5,9 @@ import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Header from "./components/Header"
 import Dashboard from "./pages/Dashboard"
+import CreateRoom from "./pages/CreateRoom"
+import Rooms from "./pages/Rooms"
+import Room from "./pages/Room"
 
 const App = () => {
   return (
@@ -16,6 +19,9 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/rooms" element={<Rooms />} />
+          <Route path="/rooms/create" element={<CreateRoom />} />
+          <Route path="/rooms/all/:id" element={<Room />} />
         </Routes>
       </Router>
     </div>

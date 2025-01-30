@@ -13,10 +13,13 @@ const roomSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    img: {
+        type: [String]
+    },
     roomsNumbers: {
         type: [{
             number:Number,
-            unavailable: [Date]
+            unavailableDates: [Date]
         }]
     }
 })

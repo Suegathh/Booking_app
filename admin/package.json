@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.1",
+    "cloudinary": "^2.5.1",
     "cra-template-redux": "2.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
