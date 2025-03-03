@@ -4,7 +4,6 @@ import "./BookingList.scss"; // Import the CSS file for styling
 
 const BookingList = ({ data }) => {
   // Sample data for demonstration
-  
 
   // Function to handle actions (e.g., edit, delete)
   const handleAction = (id, action) => {
@@ -30,7 +29,7 @@ const BookingList = ({ data }) => {
               <tr key={item._id}>
                 <td>{item.name}</td>
                 <td>{item.email}</td>
-                <td>{item.roomId.name}</td>
+                <td>{item.roomId ? item.roomId.name : "No Room"}</td>
                 <td>{item.confirmed ? "Yes" : "No"}</td>
                 <td>
                   <Link to={`/bookings/${item._id}`}> View</Link>

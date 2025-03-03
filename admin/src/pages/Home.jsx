@@ -1,9 +1,12 @@
-
-
+import "./Home.scss";
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div id="home">
+      <div className="img-wra">
+        <img src="/images/hotel1.jpeg" alt="Hotel" />
+      </div>
+    </div>
+  );
+};
 
-export default Home
+export default Home;
